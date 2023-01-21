@@ -5,6 +5,7 @@
     padding: 0;
     height: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
 }
 
 .pageContainer {
@@ -24,23 +25,28 @@
 
 .contentBox h1 {
     flex: 1;
-    padding: 50px;
     font-weight: 100;
     font-size: 2rem;
-    text-align: center;
+    text-align: left;
 }
 
 .contentBox p {
     flex: 10;
     padding-left: 50px;
     padding-right: 50px;
+    width: min(500px, 100%);
+    max-height: 100px;
+    overflow: scroll;
+    text-overflow: ellipsis;
+
 }
 
 .threeJSBox {
     flex: 1;
     font-style: italic;
     justify-items: center;
-    background-color: antiquewhite;
+    background-color: rgb(0, 0, 0);
+    width: clamp(100px, 50%, 500px);
 }
 
 .threeJSBox h1 {
@@ -49,42 +55,44 @@
     font-size: 15rem;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    overflow: hidden;
-    font-weight: 500;
 }
 
 .headerBar{
-    background-color: rgb(0, 0, 0);
+    background-color: black;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.5);
     color: whitesmoke;
     display: flex;
-    justify-content: center;
-    align-items: baseline;
-    height: 100px;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+
 }
 
-.headerBar h1 {
-    flex: 5;
-    padding: 10px;
-    padding-left: 50px;
+.headerBar>h1 {
     font-weight: 100;
     font-size: 4rem;
+    padding-left: 50px;
 }
 
 .navBar {
     display: flex;
     flex: 1;
     font-weight: 100;
+    height: 100%;
     font-size: 2rem;
-    text-decoration: none;
-    color: whitesmoke;
-    justify-content: right;
+    align-items: baseline;
+
 }
 
 .navBar a {
+    display: flex;
+    align-items: flex-end;
     color: whitesmoke;
     text-decoration: none;
-    padding: 10px;
     text-align: right;
-    align-self: center;
-    justify-content: baseline;
+    align-self: baseline;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    border-color: beige;
 }
